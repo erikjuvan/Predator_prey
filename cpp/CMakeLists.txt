@@ -18,7 +18,7 @@ target_sources(${PROJECT_NAME} PRIVATE
 target_sources(${PROJECT_NAME} PRIVATE 
 	src
 	)
-target_include_directories(${PROJECT_NAME} PRIVATE include)
+
 target_link_libraries(${PROJECT_NAME} PRIVATE sfml-graphics sfml-window sfml-system)
 
 if (UNIX)
