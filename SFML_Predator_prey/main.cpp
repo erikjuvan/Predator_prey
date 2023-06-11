@@ -147,9 +147,7 @@ struct Map {
 		if (newY < 0) newY = 0;
 		if (newY >= SizeY) newY = SizeY - 1;		
 
-		// If predator
 		if (tiles[y][x].creature == CreatureType::PREDATOR) {
-			// Looking for empty or prey
 			if (tiles[newY][newX].creature == CreatureType::NOTHING || tiles[newY][newX].creature == CreatureType::PREY) {
 				return;
 			}
@@ -158,9 +156,7 @@ struct Map {
 			}
 		}
 
-		// If prey
 		else if (tiles[y][x].creature == CreatureType::PREY) {
-			// Looking for empty
 			if (tiles[newY][newX].creature == CreatureType::NOTHING) {
 				return;
 			}
